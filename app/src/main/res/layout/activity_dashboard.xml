@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Dashboard">
+    <LinearLayout
+        android:id="@+id/upperLayout"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:orientation="horizontal"
+        android:background="#233285"
+        android:visibility="gone"
+        android:weightSum="3">
+
+        <ImageView
+            android:id="@+id/carRental"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/ic_car_rental"
+            android:padding="20dp"
+            android:layout_weight="1"
+            android:visibility="gone"
+            />
+        <ImageView
+            android:id="@+id/foodService"
+            android:layout_width="match_parent"
+            android:src="@drawable/ic_food"
+            android:padding="20dp"
+            android:visibility="gone"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            />
+        <ImageView
+            android:id="@+id/userProfile"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/ic_account"
+            android:padding="20dp"
+            android:visibility="gone"
+            android:layout_weight="1"
+            />
+
+
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/upperLayout"
+        android:background="@drawable/border"
+        android:layout_margin="15dp"
+        android:elevation="50dp"
+
+        >
+
+        <!-- First EditText -->
+        <EditText
+            android:id="@+id/Location"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginEnd="0dp"
+            android:gravity="center"
+            android:layout_marginBottom="0dp"
+            android:background="@drawable/border"
+            android:hint="Enter Location"
+            android:fontFamily="sans-serif-condensed"
+            android:textSize="15sp" />
+
+        <!-- Second EditText -->
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/pick_date_button"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_below="@id/Location"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginEnd="0dp"
+            android:fontFamily="sans-serif-condensed"
+            android:layout_marginBottom="0dp"
+            android:background="@drawable/border"
+            android:hint="Enter Date"
+            android:textSize="15sp" />
+
+
+        <!-- Third EditText -->
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/Guestnumber"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_below="@id/pick_date_button"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginEnd="0dp"
+
+            android:layout_marginBottom="0dp"
+            android:background="@drawable/border"
+            android:fontFamily="sans-serif-condensed"
+            android:hint="Room Number"
+            android:textSize="15sp" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/search"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/Guestnumber"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginEnd="0dp"
+            android:layout_marginBottom="0dp"
+            android:background="@color/blue"
+            android:text="Search"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/show_selected_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="128dp"
+        android:visibility="gone"
+        android:text="Selected Date is : "
+        android:textSize="18sp"
+        />
+    <com.fxn.BubbleTabBar
+        android:id="@+id/bottomNav"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="7dp"
+        android:background="#FFFFFF"
+        app:bubbletab_menuResource="@menu/menulist"
+        app:bubbletab_title_size="12sp"
+        android:layout_alignParentBottom="true"
+     ></com.fxn.BubbleTabBar>
+
+</RelativeLayout>

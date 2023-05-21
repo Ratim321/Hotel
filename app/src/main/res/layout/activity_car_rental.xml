@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FDFDFD"
+    tools:context=".FoodActivity">
+    <!--on below line we are creating
+       a text for our app-->
+    <TextView
+        android:id="@+id/idTVSelectedDate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/centerlayout"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="Book Here"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+    <RelativeLayout
+        android:id="@+id/centerlayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#F1EDD9"
+        android:layout_centerInParent="true"
+       >
+    <!--on below line we are creating a text view-->
+
+
+    <!--on below line we are creating
+        a button for date picker-->
+    <Button
+        android:id="@+id/idBtnPickDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+       android:layout_centerHorizontal="true"
+
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+
+        android:text="Pick Date"
+        android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/bookcar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/idBtnPickDate"
+            android:layout_centerInParent="true"
+            android:text="Book car"
+            android:textAllCaps="false" />
+
+    <TextView
+        android:id="@+id/bookingdone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/bookcar"
+        android:layout_centerHorizontal="true"
+        android:visibility="gone"
+        android:text="Booking done"
+        android:textSize="20dp"
+        android:textStyle="bold" />
+    </RelativeLayout>
+
+</RelativeLayout>
